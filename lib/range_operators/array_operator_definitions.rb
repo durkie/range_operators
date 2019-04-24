@@ -79,10 +79,10 @@ module RangeOperators
 
 		private
 		
-		# For a Range, will return value.first or value.last. A non-Range will return itself.  
+		# For a Range, will return value.first or value.max. A non-Range will return itself.  
 		def comparison_value(value, position)
 			return value if value.class != Range
-			position == :first ? value.first : value.last
+			position == :first ? value.first : value.max
 		end
 	end
 end
